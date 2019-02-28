@@ -42,19 +42,17 @@ class Owner
     pets[:dogs] << dog
   end
   
-  def walk_dog
-    @@pets[:dogs].each do |dog|
-      dog.mood = 'happy'
-  end
-  
-  def play_with_cats
-    @@pets[:cats].each do |cat|
-      cat.mood = 'happy'
+  def walk_dogs
+    pets[:dogs].map {|dog| dog.mood = "happy"}
+
+   end
+
+   def play_with_cats
+    pets[:cats].map {|cat| cat.mood = "happy"}
   end
 
-  def feed_fish
-    @@pets[:fishes].each do |fish|
-      fish.mood = 'happy'
+   def feed_fish
+    pets[:fishes].map {|fish| fish.mood = "happy"}
   end
   
   def sell_pets
